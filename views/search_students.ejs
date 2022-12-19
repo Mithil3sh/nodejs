@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Search Student
+  </h1>
+  <form action="/search">
+    <input type="text" name="name" placeholder="Search Name">
+    <input type="text" name="email" placeholder="Search email">
+    <input type="text" name="mobnum" placeholder="Search mobile number">
+    <input type="submit" value="search"><br><br>
+
+  </form>
+  <table border="1" width="100%">
+    <tr>
+      <th>S.No</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Mobile Number</th>
+    </tr>
+    <% if(students.length>0){ %>
+        
+        <% for(let i=0;i<students.length;i++){ %> 
+            <tr>
+                <td><%-students[i].id%></td>
+                <td><%-students[i].name%></td>
+                <td><%-students[i].email%></td>
+                <td><%-students[i].mobnum%></td>
+              </tr>
+        <% } %> 
+
+    <% }else{ %>
+    <h3>No Records to display</h3>
+    <% } %>
+  </table>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<table border="1" width="100%">
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+        </tr>
+        <% if(students.length>0){ %>
+            <% for(var i=0;i<students.length;i++){ %>
+                <tr>
+                    <td><%-students[i].id%></td>
+                    <td><%-students[i].name%></td>
+                    <td><%-students[i].email%></td>
+                    <td><%-studens[i].mobnum%></td>
+                </tr>
+                <% } else{ %>
+                    <h1>Students Data not found!</h1>
+                    <% } %>
+    </table> 
+
+    
+<tr>
+    <td><%-students[i].id%></td>
+    <td><%-students[i].name%></td>
+    <td><%-students[i].email%></td>
+    <td><%-studens[i].mobnum%></td>
+  </tr>
